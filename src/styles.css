@@ -1,5 +1,56 @@
-
 @import "tailwindcss";
+
+@theme {
+  /* Surfaces */
+  --color-bg: #0a0a0f;
+  --color-surface: #111118;
+  --color-surface-2: #181822;
+  --color-surface-3: #20202c;
+  --color-overlay: rgba(10, 10, 15, 0.72);
+
+  /* Borders / dividers */
+  --color-border: rgba(255, 255, 255, 0.06);
+  --color-border-strong: rgba(255, 255, 255, 0.12);
+
+  /* Foreground — text hierarchy */
+  --color-fg: #f5f5fa;
+  --color-fg-muted: #a4a4b4;
+  --color-fg-subtle: #6b6b7c;
+  --color-fg-disabled: #3f3f4a;
+
+  /* Primary — violet */
+  --color-primary-50: #f3f0ff;
+  --color-primary-100: #e6dfff;
+  --color-primary-200: #cbbfff;
+  --color-primary-300: #a78bff;
+  --color-primary-400: #8b5cff;
+  --color-primary-500: #7c3aed;
+  --color-primary-600: #6d28d9;
+  --color-primary-700: #5b21b6;
+  --color-primary-800: #4c1d95;
+  --color-primary-900: #2e1065;
+
+  /* Accent — cyan for contrast against violet */
+  --color-accent-300: #67e8f9;
+  --color-accent-400: #22d3ee;
+  --color-accent-500: #06b6d4;
+  --color-accent-600: #0891b2;
+
+  /* Semantic */
+  --color-success: #10b981;
+  --color-success-muted: #064e3b;
+  --color-warning: #f59e0b;
+  --color-warning-muted: #78350f;
+  --color-danger: #ef4444;
+  --color-danger-muted: #7f1d1d;
+  --color-info: #3b82f6;
+  --color-info-muted: #1e3a8a;
+
+  /* Brand gradient stops — useful for hero / CTA backgrounds */
+  --color-gradient-from: #7c3aed;
+  --color-gradient-via: #d946ef;
+  --color-gradient-to: #22d3ee;
+}
 
 * {
   box-sizing: border-box;
@@ -13,5 +64,9 @@ body,
 
 body {
   margin: 0;
+  background-color: var(--color-bg);
+  color: var(--color-fg);
+  color-scheme: dark;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
-
