@@ -1,6 +1,7 @@
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
 import { TanStackDevtools } from '@tanstack/react-devtools'
+import { Toaster } from 'sonner'
 
 import { SiteHeader } from '#/components/layout/site-header'
 import appCss from '../styles.css?url'
@@ -40,6 +41,20 @@ function RootDocument({ children }: { children: React.ReactNode }) {
           <SiteHeader />
           <main className="flex-1">{children}</main>
         </div>
+        <Toaster
+          theme="dark"
+          position="bottom-right"
+          richColors
+          toastOptions={{
+            classNames: {
+              toast:
+                'bg-surface-3 border border-border text-fg shadow-2xl shadow-black/50',
+              description: 'text-fg-muted',
+              actionButton: 'bg-primary-500 text-white',
+              cancelButton: 'bg-surface-2 text-fg-muted',
+            },
+          }}
+        />
         <TanStackDevtools
           config={{
             position: 'bottom-right',
