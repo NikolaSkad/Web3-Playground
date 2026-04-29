@@ -20,7 +20,7 @@ interface AddEthereumChainParameter {
 }
 
 interface WatchAssetParams {
-	type: "ERC20";
+	type: 'ERC20';
 	options: {
 		address: string;
 		symbol: string;
@@ -91,21 +91,15 @@ interface EthereumProvider {
 		args: { method: M } & (EthereumRequestMap[M] extends { params: infer P }
 			? { params: P }
 			: { params?: [] }),
-	): Promise<EthereumRequestMap[M]["return"]>;
+	): Promise<EthereumRequestMap[M]['return']>;
 
 	request<T = unknown>(args: {
 		method: string;
 		params?: unknown[] | Record<string, unknown>;
 	}): Promise<T>;
 
-	on<E extends keyof EthereumEventMap>(
-		event: E,
-		handler: EthereumEventMap[E],
-	): void;
-	removeListener<E extends keyof EthereumEventMap>(
-		event: E,
-		handler: EthereumEventMap[E],
-	): void;
+	on<E extends keyof EthereumEventMap>(event: E, handler: EthereumEventMap[E]): void;
+	removeListener<E extends keyof EthereumEventMap>(event: E, handler: EthereumEventMap[E]): void;
 }
 
 interface Window {

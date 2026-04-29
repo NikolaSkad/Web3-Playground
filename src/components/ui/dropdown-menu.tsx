@@ -1,8 +1,8 @@
-import * as DropdownMenuPrimitive from "@radix-ui/react-dropdown-menu";
-import { Check, ChevronRight } from "lucide-react";
-import type * as React from "react";
+import * as DropdownMenuPrimitive from '@radix-ui/react-dropdown-menu';
+import { Check, ChevronRight } from 'lucide-react';
+import type * as React from 'react';
 
-import { cn } from "#/lib/utils";
+import { cn } from '#/lib/utils';
 
 const DropdownMenu = DropdownMenuPrimitive.Root;
 const DropdownMenuTrigger = DropdownMenuPrimitive.Trigger;
@@ -18,9 +18,9 @@ function DropdownMenuContent({
 			<DropdownMenuPrimitive.Content
 				sideOffset={sideOffset}
 				className={cn(
-					"z-50 min-w-[12rem] overflow-hidden rounded-xl border border-border bg-surface-3 p-1.5 text-fg shadow-2xl shadow-black/50",
-					"data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95",
-					"data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2",
+					'z-50 min-w-[12rem] overflow-hidden rounded-xl border border-border bg-surface-3 p-1.5 text-fg shadow-2xl shadow-black/50',
+					'data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95',
+					'data-[side=bottom]:slide-in-from-top-2 data-[side=left]:slide-in-from-right-2 data-[side=right]:slide-in-from-left-2 data-[side=top]:slide-in-from-bottom-2',
 					className,
 				)}
 				{...props}
@@ -39,11 +39,11 @@ function DropdownMenuItem({
 	return (
 		<DropdownMenuPrimitive.Item
 			className={cn(
-				"relative flex cursor-pointer select-none items-center gap-2 rounded-md px-2.5 py-2 text-sm outline-none transition-colors",
-				"focus:bg-surface-2 focus:text-fg",
-				"data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
-				"[&_svg]:size-4 [&_svg]:shrink-0 [&_svg]:text-fg-muted",
-				inset && "pl-8",
+				'relative flex cursor-pointer select-none items-center gap-2 rounded-md px-2.5 py-2 text-sm outline-none transition-colors',
+				'focus:bg-surface-2 focus:text-fg',
+				'data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
+				'[&_svg]:size-4 [&_svg]:shrink-0 [&_svg]:text-fg-muted',
+				inset && 'pl-8',
 				className,
 			)}
 			{...props}
@@ -60,11 +60,7 @@ function DropdownMenuLabel({
 }) {
 	return (
 		<DropdownMenuPrimitive.Label
-			className={cn(
-				"px-2.5 py-1.5 text-xs font-medium text-fg-subtle",
-				inset && "pl-8",
-				className,
-			)}
+			className={cn('px-2.5 py-1.5 text-xs font-medium text-fg-subtle', inset && 'pl-8', className)}
 			{...props}
 		/>
 	);
@@ -76,24 +72,15 @@ function DropdownMenuSeparator({
 }: React.ComponentProps<typeof DropdownMenuPrimitive.Separator>) {
 	return (
 		<DropdownMenuPrimitive.Separator
-			className={cn("-mx-1 my-1 h-px bg-border", className)}
+			className={cn('-mx-1 my-1 h-px bg-border', className)}
 			{...props}
 		/>
 	);
 }
 
-function DropdownMenuShortcut({
-	className,
-	...props
-}: React.HTMLAttributes<HTMLSpanElement>) {
+function DropdownMenuShortcut({ className, ...props }: React.HTMLAttributes<HTMLSpanElement>) {
 	return (
-		<span
-			className={cn(
-				"ml-auto text-xs tracking-widest text-fg-subtle",
-				className,
-			)}
-			{...props}
-		/>
+		<span className={cn('ml-auto text-xs tracking-widest text-fg-subtle', className)} {...props} />
 	);
 }
 
@@ -106,8 +93,8 @@ function DropdownMenuCheckboxItem({
 	return (
 		<DropdownMenuPrimitive.CheckboxItem
 			className={cn(
-				"relative flex cursor-pointer select-none items-center rounded-md py-2 pl-8 pr-2.5 text-sm outline-none transition-colors",
-				"focus:bg-surface-2 focus:text-fg data-[disabled]:pointer-events-none data-[disabled]:opacity-50",
+				'relative flex cursor-pointer select-none items-center rounded-md py-2 pl-8 pr-2.5 text-sm outline-none transition-colors',
+				'focus:bg-surface-2 focus:text-fg data-[disabled]:pointer-events-none data-[disabled]:opacity-50',
 				className,
 			)}
 			checked={checked}
@@ -134,8 +121,8 @@ function DropdownMenuSubTrigger({
 	return (
 		<DropdownMenuPrimitive.SubTrigger
 			className={cn(
-				"flex cursor-pointer select-none items-center gap-2 rounded-md px-2.5 py-2 text-sm outline-none focus:bg-surface-2 data-[state=open]:bg-surface-2",
-				inset && "pl-8",
+				'flex cursor-pointer select-none items-center gap-2 rounded-md px-2.5 py-2 text-sm outline-none focus:bg-surface-2 data-[state=open]:bg-surface-2',
+				inset && 'pl-8',
 				className,
 			)}
 			{...props}
@@ -155,8 +142,8 @@ function DropdownMenuSubContent({
 	return (
 		<DropdownMenuPrimitive.SubContent
 			className={cn(
-				"z-50 min-w-[10] overflow-hidden rounded-xl border border-border bg-surface-3 p-1.5 shadow-2xl shadow-black/50",
-				"data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95",
+				'z-50 min-w-[10] overflow-hidden rounded-xl border border-border bg-surface-3 p-1.5 shadow-2xl shadow-black/50',
+				'data-[state=open]:animate-in data-[state=closed]:animate-out data-[state=closed]:fade-out-0 data-[state=open]:fade-in-0 data-[state=closed]:zoom-out-95 data-[state=open]:zoom-in-95',
 				className,
 			)}
 			{...props}

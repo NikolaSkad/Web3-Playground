@@ -1,4 +1,4 @@
-import type * as React from "react";
+import type * as React from 'react';
 
 import {
 	Dialog,
@@ -7,14 +7,14 @@ import {
 	DialogFooter,
 	DialogHeader,
 	DialogTitle,
-} from "#/components/ui/dialog";
-import { cn } from "#/lib/utils";
+} from '#/components/ui/dialog';
+import { cn } from '#/lib/utils';
 
 const sizeMap = {
-	sm: "max-w-sm",
-	md: "max-w-md",
-	lg: "max-w-lg",
-	xl: "max-w-2xl",
+	sm: 'max-w-sm',
+	md: 'max-w-md',
+	lg: 'max-w-lg',
+	xl: 'max-w-2xl',
 } as const;
 
 export interface ModalProps {
@@ -36,7 +36,7 @@ export function Modal({
 	description,
 	children,
 	footer,
-	size = "md",
+	size = 'md',
 	className,
 	hideClose,
 }: ModalProps) {
@@ -46,9 +46,7 @@ export function Modal({
 				{(title || description) && (
 					<DialogHeader>
 						{title && <DialogTitle>{title}</DialogTitle>}
-						{description && (
-							<DialogDescription>{description}</DialogDescription>
-						)}
+						{description && <DialogDescription>{description}</DialogDescription>}
 					</DialogHeader>
 				)}
 
