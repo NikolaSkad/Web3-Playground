@@ -1,6 +1,17 @@
 @import "tailwindcss";
+@import "tw-animate-css";
 
 @theme {
+  /* Radius */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-2xl: 20px;
+
+  /* Focus ring */
+  --color-ring: #8b5cff;
+
   /* Surfaces */
   --color-bg: #0a0a0f;
   --color-surface: #111118;
